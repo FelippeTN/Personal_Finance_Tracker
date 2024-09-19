@@ -8,7 +8,6 @@ client = Groq(
 def groq_call(message):
     user_data = pd.read_csv('./data/finance_data.csv')
     user_data = user_data.to_string(index=False)
-    print(user_data)
     chat_completion = client.chat.completions.create(
         messages=[
             {
